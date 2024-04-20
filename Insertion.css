@@ -1,0 +1,171 @@
+body {
+  background-image: linear-gradient(to top, #f3f38f, #93ff91, #71e0f9);
+  overflow-x: hidden;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+* {
+  color: white;
+}
+.input-group-text {
+  background-color: rgb(255, 0, 128);
+  color: rgb(14, 139, 0);
+}
+#elementHelp {
+  color: white;
+}
+.container {
+  margin-bottom: 5vh;
+}
+img {
+  width: 10%;
+  height: 10%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.b2 {
+  margin-left: 10%;
+}
+.b1 {
+  margin-left: -40%;
+}
+
+.boxes {
+  background-color: aliceblue;
+  margin-top: 0.5%;
+  margin-left: 0.6%;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: #f80a69 1px 1px 4px 0.2px;
+  display: flex;
+}
+
+#rangelabel {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+
+#controls {
+  margin: 1% auto;
+  background-color: rgb(3, 6, 62);
+  border-radius: 10px;
+}
+
+#cont-row {
+  justify-content: space-between;
+}
+
+#rangelabel {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn-toolbar {
+  justify-content: flex-end;
+}
+
+.code-container {
+  margin: 2%;
+  padding: 1%;
+  margin-top: 3%;
+  background-color: rgb(0, 10, 102);
+  border-radius: 15px;
+}
+
+.code {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.code-btn {
+  margin: 0px 2px;
+  color: #0dfd00;
+}
+
+.code-btn:hover {
+  color: rgb(255, 0, 76);
+  background-color: #f0f80a;
+}
+
+nav {
+  background: rgb(1, 205, 246);
+}
+
+#entry {
+  background-image: linear-gradient(to left, #5500ff, #f7095c);
+  margin: 0px auto;
+  padding: 2%;
+  width: 95vw;
+  border-radius: 10px;
+}
+h1 {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  font-size: 4.7rem;
+}
+
+h1:after {
+  position: relative;
+  content: "";
+  width: 100%;
+  height: 100%;
+  line-height: 48px;
+  color: #ff025f;
+  animation: abomination1 3s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes abomination1 {
+  0% {
+    content: "I";
+  }
+  8% {
+    content: "IN";
+  }
+  16% {
+    content: "INS";
+  }
+  24% {
+    content: "INSE ";
+  }
+  32% {
+    content: "INSER";
+  }
+  40% {
+    content: "INSERT";
+  }
+  48% {
+    content: "INSERTI";
+  }
+  56% {
+    content: "INSERTIO";
+  }
+  64% {
+    content: "INSERTION";
+  }
+  72% {
+    content: "INSERTION ";
+  }
+  80% {
+    content: "INSERTION S";
+  }
+  88% {
+    content: "INSERTION SO";
+  }
+  96% {
+    content: "INSERTION SOR";
+  }
+  100% {
+    content: "INSERTION SORT";
+  }
+  
+}
+.nums {
+  width: 2rem;
+  background-color: rgb(0, 0, 0);
+}

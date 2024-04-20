@@ -1,0 +1,43 @@
+body
+{
+  width: 100vw;
+  background-color: rgb(254, 254, 153);
+  overflow-x: hidden;
+}
+img {
+  width: 8%;
+  height: 6%;
+}
+nav {
+  background: rgb(0, 204, 255);
+  height: 15vh;
+  margin-bottom:2vh ;
+}
+.bar-chart {
+  width: 100vw;
+}
+.bar-chart #chart {
+  width: 2%;
+}
+form {
+  text-align: center;
+}
+label {
+  cursor: pointer;
+}
+input {
+  cursor: pointer;
+}
+rect:hover {
+  cursor: pointer;
+}
+
+/* .stop {
+  background-image: linear-gradient(
+    to right,
+    #ad4a04 0%,
+    #d36756 51%,
+    #8f5a34 100%
+  );
+} */
+

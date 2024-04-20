@@ -1,0 +1,93 @@
+body {
+  background-color: rgb(6, 6, 56);
+  overflow-x: hidden;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+*{
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 30%;
+  height: 30%;
+  margin: 2% auto;
+}
+h1 {
+  color: azure;
+}
+h1 {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #09c9f0 0%,
+    #4cea0d 29%,
+    #ebff13 67%,
+    #ff0066 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.display-2 {
+  color: aquamarine;
+}
+.card-text {
+  opacity: 0;
+}
+.card {
+  margin: 4%;
+  transition: all 0.3s linear 0.01ms;
+  transform: scale(1.025);
+  background-color: #f80a69;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: cornsilk;
+}
+.card:hover {
+  transform: scale(1.2);
+}
+.card:hover .card-text {
+  opacity: 1;
+}
+.logout {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: cornsilk;
+}
+h2 {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #f0094a 0%,
+    #df0dea 29%,
+    #13f3ff 67%,
+    #fbff00 100%
+  );
+  margin-top: 2%;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

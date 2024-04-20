@@ -1,0 +1,232 @@
+body {
+  background-image: linear-gradient(to bottom, #fc5c7d, #f360ec, #d176ff);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.deconstructed {
+  position: relative;
+  margin: auto;
+  color: transparent;
+  font-family: "Cambay", sans-serif;
+  font-size: 10vw;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.03em;
+}
+
+.deconstructed > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #090794;
+  pointer-events: none;
+}
+
+.deconstructed > div:nth-child(1) {
+  -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+  mask-image: linear-gradient(black 25%, transparent 25%);
+  animation: deconstructed1 5s forwards;
+}
+
+.deconstructed > div:nth-child(2) {
+  -webkit-mask-image: linear-gradient(
+    transparent 25%,
+    black 25%,
+    black 50%,
+    transparent 50%
+  );
+  mask-image: linear-gradient(
+    transparent 25%,
+    black 25%,
+    black 50%,
+    transparent 50%
+  );
+  animation: deconstructed2 5s forwards;
+}
+
+.deconstructed > div:nth-child(3) {
+  -webkit-mask-image: linear-gradient(
+    transparent 50%,
+    black 50%,
+    black 75%,
+    transparent 75%
+  );
+  mask-image: linear-gradient(
+    transparent 50%,
+    black 50%,
+    black 75%,
+    transparent 75%
+  );
+  animation: deconstructed3 5s forwards;
+}
+
+.deconstructed > div:nth-child(4) {
+  -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+  mask-image: linear-gradient(transparent 75%, black 75%);
+  animation: deconstructed4 5s forwards;
+}
+
+@keyframes deconstructed1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  26% {
+    transform: translateX(0%);
+  }
+
+  83% {
+    transform: translateX(0%);
+  }
+
+  100% {
+  }
+}
+
+@keyframes deconstructed2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  24% {
+    transform: translateX(0.5%);
+  }
+
+  82% {
+    transform: translateX(0%);
+  }
+
+  100% {
+  }
+}
+
+@keyframes deconstructed3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  22% {
+    transform: translateX(0%);
+  }
+
+  81% {
+    transform: translateX(0%);
+  }
+
+  100% {
+  }
+}
+
+@keyframes deconstructed4 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  20% {
+    transform: translateX(0%);
+  }
+
+  80% {
+    transform: translateX(0%);
+  }
+
+  100% {
+  }
+}
+
+#logo {
+  height: 10%;
+  width: 10%;
+}
+
+.name {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 1% 10% 0 10%;
+  background-size: cover;
+  background-position: left;
+  text-align: center;
+
+  font-size: 5rem;
+}
+
+.entry {
+  font-size: 1.5rem;
+  padding: 1%;
+  margin: 0 2%;
+}
+
+#entry {
+  background-image: linear-gradient(to right, #0099ff, #07ccfe);
+  margin: 0px auto;
+  padding: 2%;
+  border-radius: 10px;
+}
+nav {
+  background-color: #0388fd;
+}
+
+.row {
+  align-items: center;
+}
+
+.boxes {
+  margin: 1%;
+  height: 50vh;
+  border-radius: 10px;
+  box-shadow: rgb(200, 200, 200) 0px 2px 5px 0.2px;
+  display: flex;
+  background-color: azure;
+}
+
+#controls {
+  margin: 1% auto;
+  background-color: rgb(2, 7, 55);
+  border-radius: 10px;
+}
+
+#cont-row {
+  justify-content: space-between;
+}
+
+#rangelabel {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn-toolbar {
+  justify-content: flex-end;
+}
+
+.code-container {
+  margin: 2%;
+  padding: 1%;
+  margin-top: 3%;
+  background-color: #05044e;
+  border-radius: 10px;
+  color: white;
+}
+
+.code {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.code-btn {
+  margin: 0px 2px;
+  color: rgb(252, 5, 104);
+}
+
+.code-btn:hover {
+  color: rgb(16, 181, 246);
+  background-color: rgb(251, 226, 65);
+}
+.nums {
+  width: 2rem;
+  background-color: black;
+}

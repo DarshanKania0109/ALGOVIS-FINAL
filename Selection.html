@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Selection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Selection.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <img src="ALGOVIS LOGO-1-Transparent.png" alt="Logo" id="logo">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Sorting Algorithms
+                            </a>
+                            <ul class="dropdown-menu active">
+                                <li><a class="dropdown-item" href="Bubble.html">Bubble Sort</a></li>
+                                <li><a class="dropdown-item" href="Insertion.html">Insertion Sort</a></li>
+                                <li><a class="dropdown-item" href="Merge.html">Merge Sort</a></li>
+                                <li><a class="dropdown-item" href="Quick.html">Quick Sort</a></li>
+                                <li><a class="dropdown-item" href="Heap.html">Radix Sort</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Searching Algorithms</a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="LinSearch.html">Linear Search</a></li>
+                                <li><a class="dropdown-item" href="BinSearch.html">Binary Search</a></li>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="name">
+        SELCECTION SORT
+    </div>
+
+
+    <div class="entry">
+        <form action="" id="entry">
+
+            <div class="row">
+                <div class="col-md-2 col-sm-0"></div>
+
+                <div class="col-md-3 col-sm-6">
+                    <label for="elements" class="form-label">Enter no. of elements: </label>
+                </div>
+
+                <div class="col-md-5 col-sm-6">
+                    <input type="number" class="form-control" id="elements" name="elements"
+                        aria-describedby="elementHelp" min="1" max="50" value="7" required>
+                    <div id="elementHelp" class="form-text">
+                        Enter a number between 1 and 50
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-0"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-0"></div>
+                <div class="col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-light my-2 entry-btn" id="randBtn">Generate Random
+                        Array</button>
+                </div>
+
+                <div class="col-md-3 text-center col-sm-6">
+                    <button class="btn btn-light my-3 entry-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Enter Each Element
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-0"></div>
+                <div class="collapse col-md-8 col-sm-6" id="collapseExample">
+                    <div class="card card-body">
+                        <label for="inputelement">Enter elements: </label>
+                        <input type="text" class="form-control" id="inputelement" aria-describedby="inputelementHelp">
+                        <div id="inputelementHelp" class="form-text">Enter each element separated by comma ","</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-0"></div>
+                <div class="col-md-8 col-sm-6">
+                    <button type="submit" class="btn btn-light form-control entry-btn" id="sort-btn">Sort</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="boxes">
+
+    </div>
+
+    <div class="container" id="controls">
+        <div class="row" id="cont-row">
+            <div class="col-md-4 col-sm-6">
+                <label for="speed" id="rangelabel">Speed: </label>
+                <input type="range" class="form-range" min="0.25" max="2" step="0.25" value="1" id="speed">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active code-btn" id="nav-C++-tab" data-bs-toggle="tab" data-bs-target="#nav-C++"
+                type="button" role="tab" aria-controls="nav-C++" aria-selected="true">C++</button>
+            <button class="nav-link code-btn" id="nav-Java-tab" data-bs-toggle="tab" data-bs-target="#nav-Java"
+                type="button" role="tab" aria-controls="nav-Java" aria-selected="false">Java</button>
+            <button class="nav-link code-btn" id="nav-clanguage-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-clanguage" type="button" role="tab" aria-controls="nav-clanguage"
+                aria-selected="false">C Language</button>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-C++" role="tabpanel" aria-labelledby="nav-C++-tab"
+                tabindex="0">
+                <pre class="code">
+                    <code>
+//C++ code here
+// Selection sort in C++
+
+#include&lt;iostream&gt;
+using namespace std;
+
+// function to swap the the position of two elements
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+// function to print an array
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; i++) {
+    cout << array[i] << " ";
+  }
+  cout << endl;
+}
+
+void selectionSort(int array[], int size) {
+  for (int step = 0; step < size - 1; step++) {
+    int min_idx = step;
+    for (int i = step + 1; i < size; i++) {
+
+      // To sort in descending order, change > to < in this line.
+      // Select the minimum element in each loop.
+      if (array[i] < array[min_idx])
+        min_idx = i;
+    }
+
+    // put min at the correct position
+    swap(&array[min_idx], &array[step]);
+  }
+}
+
+// driver code
+int main() {
+  int data[] = {20, 12, 10, 15, 2};
+  int size = sizeof(data) / sizeof(data[0]);
+  selectionSort(data, size);
+  cout << "Sorted array in Acsending Order:\n";
+  printArray(data, size);
+}           
+                    </code>
+                    </pre>
+            </div>
+            <div class="tab-pane fade" id="nav-Java" role="tabpanel" aria-labelledby="nav-Java-tab" tabindex="0">
+                <pre class="code">
+                    <code>
+//Java code here
+// Selection sort in Java
+
+import java.util.Arrays;
+
+class SelectionSort {
+  void selectionSort(int array[]) {
+    int size = array.length;
+
+    for (int step = 0; step < size - 1; step++) {
+      int min_idx = step;
+
+      for (int i = step + 1; i < size; i++) {
+
+        // To sort in descending order, change > to < in this line.
+        // Select the minimum element in each loop.
+        if (array[i] < array[min_idx]) {
+          min_idx = i;
+        }
+      }
+
+      // put min at the correct position
+      int temp = array[step];
+      array[step] = array[min_idx];
+      array[min_idx] = temp;
+    }
+  }
+
+  // driver code
+  public static void main(String args[]) {
+    int[] data = { 20, 12, 10, 15, 2 };
+    SelectionSort ss = new SelectionSort();
+    ss.selectionSort(data);
+    System.out.println("Sorted Array in Ascending Order: ");
+    System.out.println(Arrays.toString(data));
+  }
+}                  
+                    </code>
+                    </pre>
+            </div>
+            <div class="tab-pane fade" id="nav-clanguage" role="tabpanel" aria-labelledby="nav-clanguage-tab"
+                tabindex="0">
+                <pre class="code">
+                    <code>
+//C Language code here
+// Selection sort in C
+
+#include &lt;stdio.h&gt;
+
+// function to swap the the position of two elements
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void selectionSort(int array[], int size) {
+  for (int step = 0; step < size - 1; step++) {
+    int min_idx = step;
+    for (int i = step + 1; i < size; i++) {
+
+      // To sort in descending order, change > to < in this line.
+      // Select the minimum element in each loop.
+      if (array[i] < array[min_idx])
+        min_idx = i;
+    }
+
+    // put min at the correct position
+    swap(&array[min_idx], &array[step]);
+  }
+}
+
+// function to print an array
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    printf("%d  ", array[i]);
+  }
+  printf("\n");
+}
+
+// driver code
+int main() {
+  int data[] = {20, 12, 10, 15, 2};
+  int size = sizeof(data) / sizeof(data[0]);
+  selectionSort(data, size);
+  printf("Sorted array in Acsending Order:\n");
+  printArray(data, size);
+}                  
+                    </code>
+                    </pre>
+            </div>
+            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
+                tabindex="0">...</div>
+        </div>
+
+
+    </div>
+    <script src="sorting.js"></script>
+    <script src="selection.js"></script>
+
+</body>
+
+</html>

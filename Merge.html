@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merge </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="Merge.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <img src="ALGOVIS LOGO-1-Transparent.png" alt="Logo" id="logo">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Sorting Algorithms
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item btn btn-primary" href="Bubble.html">Bubble Sort</a></li>
+                <li><a class="dropdown-item btn btn-primary" href="Selection.html">Selection Sort</a>
+                </li>
+                <li><a class="dropdown-item btn btn-primary" href="Quick.html">Quick Sort</a></li>
+                <li><a class="dropdown-item btn btn-primary" href="Insertion.html">Insertion Sort</a>
+                </li>
+                <li><a class="dropdown-item btn btn-primary" href="Heap.html">Heap Sort</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Searching Algorithms</a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="LinSearch.html">Linear Search</a></li>
+                <li><a class="dropdown-item" href="BinSearch.html">Binary Search</a></li>
+              </ul>
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="name deconstructed">
+    MERGE SORT
+    <div>MERGE SORT</div>
+    <div>MERGE SORT</div>
+    <div>MERGE SORT</div>
+    <div>MERGE SORT</div>
+  </div>
+  <div class="entry">
+    <form action="" id="entry">
+
+      <div class="row">
+        <div class="col-md-2 col-sm-0"></div>
+
+        <div class="col-md-3 col-sm-6">
+          <label for="elements" class="form-label">Enter no. of elements: </label>
+        </div>
+
+        <div class="col-md-5 col-sm-6">
+          <input type="number" class="form-control" id="elements" name="elements" aria-describedby="elementHelp" min="1"
+            max="50" value="7" required>
+          <div id="elementHelp" class="form-text">
+            Enter a number between 1 and 50
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-0"></div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-3 col-sm-6">
+          <button type="button" class="btn btn-light my-2 entry-btn" id="randBtn">Generate Random Array</button>
+        </div>
+
+        <div class="col-md-3 text-center col-sm-6">
+          <button class="btn btn-light my-3 entry-btn" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Enter Each Element
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="collapse col-md-8 col-sm-6" id="collapseExample">
+          <div class="card card-body">
+            <label for="inputelement">Enter elements: </label>
+            <input type="text" class="form-control" id="inputelement" aria-describedby="inputelementHelp">
+            <div id="inputelementHelp" class="form-text">Enter each element separated by comma ","</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-8 col-sm-6">
+          <button type="submit" class="btn btn-light form-control entry-btn" id="sort-btn">Sort</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="boxes" id="contHeight">
+
+  </div>
+
+  <div class="container" id="controls">
+    <div class="row" id="cont-row">
+      <div class="col-md-4 col-sm-6">
+        <label for="speed" id="rangelabel">Speed: </label>
+        <input type="range" class="form-range" min="0.25" max="2" step="0.25" value="1" id="speed">
+      </div>
+    </div>
+  </div>
+
+  <div class="code-container">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active code-btn" id="nav-C++-tab" data-bs-toggle="tab" data-bs-target="#nav-C++"
+        type="button" role="tab" aria-controls="nav-C++" aria-selected="true">C++</button>
+      <button class="nav-link code-btn" id="nav-Java-tab" data-bs-toggle="tab" data-bs-target="#nav-Java" type="button"
+        role="tab" aria-controls="nav-Java" aria-selected="false">Java</button>
+      <button class="nav-link code-btn" id="nav-clanguage-tab" data-bs-toggle="tab" data-bs-target="#nav-clanguage"
+        type="button" role="tab" aria-controls="nav-clanguage" aria-selected="false">C Language</button>
+    </div>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-C++" role="tabpanel" aria-labelledby="nav-C++-tab" tabindex="0">
+        <pre class="code">
+                    <code>
+//C++ code here
+// Merge sort in C++
+
+#include&lt;iostream&gt;
+using namespace std;
+
+// Merge two subarrays L and M into arr
+void merge(int arr[], int p, int q, int r) {
+  
+  // Create L ← A[p..q] and M ← A[q+1..r]
+  int n1 = q - p + 1;
+  int n2 = r - q;
+
+  int L[n1], M[n2];
+
+  for (int i = 0; i < n1; i++)
+    L[i] = arr[p + i];
+  for (int j = 0; j < n2; j++)
+    M[j] = arr[q + 1 + j];
+
+  // Maintain current index of sub-arrays and main array
+  int i, j, k;
+  i = 0;
+  j = 0;
+  k = p;
+
+  // Until we reach either end of either L or M, pick larger among
+  // elements L and M and place them in the correct position at A[p..r]
+  while (i < n1 && j < n2) {
+    if (L[i] <= M[j]) {
+      arr[k] = L[i];
+      i++;
+    } else {
+      arr[k] = M[j];
+      j++;
+    }
+    k++;
+  }
+
+  // When we run out of elements in either L or M,
+  // pick up the remaining elements and put in A[p..r]
+  while (i < n1) {
+    arr[k] = L[i];
+    i++;
+    k++;
+  }
+
+  while (j < n2) {
+    arr[k] = M[j];
+    j++;
+    k++;
+  }
+}
+
+// Divide the array into two subarrays, sort them and merge them
+void mergeSort(int arr[], int l, int r) {
+  if (l < r) {
+    // m is the point where the array is divided into two subarrays
+    int m = l + (r - l) / 2;
+
+    mergeSort(arr, l, m);
+    mergeSort(arr, m + 1, r);
+
+    // Merge the sorted subarrays
+    merge(arr, l, m, r);
+  }
+}
+
+// Print the array
+void printArray(int arr[], int size) {
+  for (int i = 0; i < size; i++)
+    cout << arr[i] << " ";
+  cout << endl;
+}
+
+// Driver program
+int main() {
+  int arr[] = {6, 5, 12, 10, 9, 1};
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  mergeSort(arr, 0, size - 1);
+
+  cout << "Sorted array: \n";
+  printArray(arr, size);
+  return 0;
+}                 
+                    </code>
+                    </pre>
+      </div>
+      <div class="tab-pane fade" id="nav-Java" role="tabpanel" aria-labelledby="nav-Java-tab" tabindex="0">
+        <pre class="code">
+                    <code>
+//Java code here
+// Merge sort in Java
+
+class MergeSort {
+
+  // Merge two subarrays L and M into arr
+  void merge(int arr[], int p, int q, int r) {
+
+    // Create L ← A[p..q] and M ← A[q+1..r]
+    int n1 = q - p + 1;
+    int n2 = r - q;
+
+    int L[] = new int[n1];
+    int M[] = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+      L[i] = arr[p + i];
+    for (int j = 0; j < n2; j++)
+      M[j] = arr[q + 1 + j];
+
+    // Maintain current index of sub-arrays and main array
+    int i, j, k;
+    i = 0;
+    j = 0;
+    k = p;
+
+    // Until we reach either end of either L or M, pick larger among
+    // elements L and M and place them in the correct position at A[p..r]
+    while (i < n1 && j < n2) {
+      if (L[i] <= M[j]) {
+        arr[k] = L[i];
+        i++;
+      } else {
+        arr[k] = M[j];
+        j++;
+      }
+      k++;
+    }
+
+    // When we run out of elements in either L or M,
+    // pick up the remaining elements and put in A[p..r]
+    while (i < n1) {
+      arr[k] = L[i];
+      i++;
+      k++;
+    }
+
+    while (j < n2) {
+      arr[k] = M[j];
+      j++;
+      k++;
+    }
+  }
+
+  // Divide the array into two subarrays, sort them and merge them
+  void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+
+      // m is the point where the array is divided into two subarrays
+      int m = (l + r) / 2;
+
+      mergeSort(arr, l, m);
+      mergeSort(arr, m + 1, r);
+
+      // Merge the sorted subarrays
+      merge(arr, l, m, r);
+    }
+  }
+
+  // Print the array
+  static void printArray(int arr[]) {
+    int n = arr.length;
+    for (int i = 0; i < n; ++i)
+      System.out.print(arr[i] + " ");
+    System.out.println();
+  }
+
+  // Driver program
+  public static void main(String args[]) {
+    int arr[] = { 6, 5, 12, 10, 9, 1 };
+
+    MergeSort ob = new MergeSort();
+    ob.mergeSort(arr, 0, arr.length - 1);
+
+    System.out.println("Sorted array:");
+    printArray(arr);
+  }
+}    
+                    </code>
+                    </pre>
+      </div>
+      <div class="tab-pane fade" id="nav-clanguage" role="tabpanel" aria-labelledby="nav-clanguage-tab" tabindex="0">
+        <pre class="code">
+                    <code>
+//C Language code here
+// Merge sort in C
+
+#include&lt;stdio.h&gt;
+
+// Merge two subarrays L and M into arr
+void merge(int arr[], int p, int q, int r) {
+
+  // Create L ← A[p..q] and M ← A[q+1..r]
+  int n1 = q - p + 1;
+  int n2 = r - q;
+
+  int L[n1], M[n2];
+
+  for (int i = 0; i < n1; i++)
+    L[i] = arr[p + i];
+  for (int j = 0; j < n2; j++)
+    M[j] = arr[q + 1 + j];
+
+  // Maintain current index of sub-arrays and main array
+  int i, j, k;
+  i = 0;
+  j = 0;
+  k = p;
+
+  // Until we reach either end of either L or M, pick larger among
+  // elements L and M and place them in the correct position at A[p..r]
+  while (i < n1 && j < n2) {
+    if (L[i] <= M[j]) {
+      arr[k] = L[i];
+      i++;
+    } else {
+      arr[k] = M[j];
+      j++;
+    }
+    k++;
+  }
+
+  // When we run out of elements in either L or M,
+  // pick up the remaining elements and put in A[p..r]
+  while (i < n1) {
+    arr[k] = L[i];
+    i++;
+    k++;
+  }
+
+  while (j < n2) {
+    arr[k] = M[j];
+    j++;
+    k++;
+  }
+}
+
+// Divide the array into two subarrays, sort them and merge them
+void mergeSort(int arr[], int l, int r) {
+  if (l < r) {
+
+    // m is the point where the array is divided into two subarrays
+    int m = l + (r - l) / 2;
+
+    mergeSort(arr, l, m);
+    mergeSort(arr, m + 1, r);
+
+    // Merge the sorted subarrays
+    merge(arr, l, m, r);
+  }
+}
+
+// Print the array
+void printArray(int arr[], int size) {
+  for (int i = 0; i < size; i++)
+    printf("%d ", arr[i]);
+  printf("\n");
+}
+
+// Driver program
+int main() {
+  int arr[] = {6, 5, 12, 10, 9, 1};
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  mergeSort(arr, 0, size - 1);
+
+  printf("Sorted array: \n");
+  printArray(arr, size);
+}
+                  
+                    </code>
+                    </pre>
+      </div>
+      <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...
+      </div>
+    </div>
+
+
+  </div>
+  <script src="sorting.js"></script>
+  <script src="merge.js"></script>
+</body>
+
+</html>
